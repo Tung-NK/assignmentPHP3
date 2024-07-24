@@ -1,0 +1,1 @@
+<span>Click here to<a href="{{route('resetPass', $token)}}">Reset Password</a></span>

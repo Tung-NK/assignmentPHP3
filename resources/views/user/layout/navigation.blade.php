@@ -71,12 +71,17 @@
                         </div>
                         <!-- Single Wedge Start -->
                         <div class="header-bottom-set dropdown">
-                            <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
-                                    class="icon-user"></i></button>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a class="dropdown-item" href="my-account.html">My account</a></li>
-                                <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-                                <li><a class="dropdown-item" href="login.html">Sign in</a></li>
+                            @if (Auth::check())
+                                <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
+                                        class="icon-user"><span
+                                            class="ms-3 fs-6">{{ 'Hello ' . Auth::user()->name }}</span></i></button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a class="dropdown-item" href="">My account</a></li>
+                                    <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
+                                @else
+                                    <li><a class="dropdown-item" href="{{ route('login') }}">Sign in</a></li>
+                            @endif
                             </ul>
                         </div>
                         <!-- Single Wedge End -->
@@ -124,12 +129,16 @@
                         </div>
                         <!-- Single Wedge Start -->
                         <div class="header-bottom-set dropdown">
-                            <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
-                                    class="icon-user"></i></button>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a class="dropdown-item" href="my-account.html">My account</a></li>
-                                <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-                                <li><a class="dropdown-item" href="login.html">Sign in</a></li>
+                            @if (Auth::check())
+                                <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
+                                        class="icon-user"></i></button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a class="dropdown-item" href="">My account</a></li>
+                                    <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+                                    <li><a class="dropdown-item" href="{{route('logout')}}">Logout</a></li>
+                                @else
+                                    <li><a class="dropdown-item" href="{{route('login')}}">Sign in</a></li>
+                            @endif
                             </ul>
                         </div>
                         <!-- Single Wedge End -->
@@ -157,12 +166,7 @@
                 <div class="col-md-12 align-self-center">
                     <div class="main-menu manu-color-white">
                         <ul>
-                            <li class="dropdown"><a href="#">Home <i class="ion-ios-arrow-down"></i></a>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Home 1</a></li>
-                                    <li><a href="index-2.html">Home 2</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="">Home</a></li>
                             <li><a href="about.html">About us</a></li>
                             <li class="dropdown position-static"><a href="#">Shop <i
                                         class="ion-ios-arrow-down"></i></a>
@@ -211,13 +215,13 @@
                                         <ul class="menu-banner w-100">
                                             <li>
                                                 <a class="p-0" href="shop-left-sidebar.html"><img
-                                                        class="img-responsive w-100" src="assets_user/images/banner/3.jpg"
-                                                        alt=""></a>
+                                                        class="img-responsive w-100"
+                                                        src="assets_user/images/banner/3.jpg" alt=""></a>
                                             </li>
                                             <li>
                                                 <a class="p-0" href="shop-left-sidebar.html"><img
-                                                        class="img-responsive w-100" src="assets_user/images/banner/4.jpg"
-                                                        alt=""></a>
+                                                        class="img-responsive w-100"
+                                                        src="assets_user/images/banner/4.jpg" alt=""></a>
                                             </li>
                                         </ul>
                                     </li>

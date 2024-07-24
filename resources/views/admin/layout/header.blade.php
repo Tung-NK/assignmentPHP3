@@ -37,33 +37,33 @@
                     <div class="dropdown-menu dropdown-menu-end p-0">
                         <div class="p-1">
                             <a class="dropdown-item py-2" href="javascript:void(0);">
-                                <img src="assets_admin/images/brands/github.svg" class="avatar-xs"
+                                <img src="{{asset('assets_admin/images/brands/github.svg')}}" class="avatar-xs"
                                     alt="Github" />
                                 <span class="ms-2">GitHub:
                                     <span class="fw-medium">@reback</span></span>
                             </a>
                             <a class="dropdown-item py-2" href="javascript:void(0);">
-                                <img src="assets_admin/images/brands/bitbucket.svg" class="avatar-xs"
+                                <img src="{{asset('assets_admin/images/brands/bitbucket.svg')}}" class="avatar-xs"
                                     alt="bitbucket" />
                                 <span class="ms-2">Bitbucket:
                                     <span class="fw-medium">@reback</span></span>
                             </a>
                             <a class="dropdown-item py-2" href="javascript:void(0);">
-                                <img src="assets_admin/images/brands/dribbble.svg" class="avatar-xs"
+                                <img src="{{asset('assets_admin/images/brands/dribbble.svg')}}" class="avatar-xs"
                                     alt="dribbble" />
                                 <span class="ms-2">Dribbble:
                                     <span class="fw-medium">@username</span></span>
                             </a>
 
                             <a class="dropdown-item py-2" href="javascript:void(0);">
-                                <img src="assets_admin/images/brands/dropbox.svg" class="avatar-xs"
+                                <img src="{{asset('assets_admin/images/brands/dropbox.svg')}}" class="avatar-xs"
                                     alt="dropbox" />
                                 <span class="ms-2">Dropbox:
                                     <span class="fw-medium">@username</span></span>
                             </a>
 
                             <a class="dropdown-item py-2" href="javascript:void(0);">
-                                <img src="assets_admin/images/brands/slack.svg" class="avatar-xs"
+                                <img src="{{asset('assets_admin/images/brands/slack.svg')}}" class="avatar-xs"
                                     alt="mail_chimp" />
                                 <span class="ms-2">Slack:
                                     <span class="fw-medium">@reback</span></span>
@@ -105,7 +105,7 @@
                             <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom text-wrap">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <img src="assets_admin/images/users/avatar-1.jpg"
+                                        <img src="{{asset('assets_admin/images/users/avatar-1.jpg')}}"
                                             class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-1" />
                                     </div>
                                     <div class="flex-grow-1">
@@ -144,7 +144,7 @@
                             <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <img src="assets_admin/images/users/avatar-3.jpg"
+                                        <img src="{{asset('assets_admin/images/users/avatar-3.jpg')}}"
                                             class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-3" />
                                     </div>
                                     <div class="flex-grow-1">
@@ -182,7 +182,7 @@
                             <a href="javascript:void(0);" class="dropdown-item py-3 border-bottom">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0">
-                                        <img src="assets_admin/images/users/avatar-5.jpg"
+                                        <img src="{{asset('assets_admin/images/users/avatar-5.jpg')}}"
                                             class="img-fluid me-2 avatar-sm rounded-circle" alt="avatar-5" />
                                     </div>
                                     <div class="flex-grow-1">
@@ -229,7 +229,7 @@
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="d-flex align-items-center">
                             <img class="rounded-circle" width="32"
-                                src="assets_admin/images/users/avatar-1.jpg" alt="avatar-3" />
+                                src="{{asset('assets_admin/images/users/avatar-1.jpg')}}" alt="avatar-3" />
                         </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end">
@@ -259,7 +259,7 @@
 
                         <div class="dropdown-divider my-1"></div>
 
-                        <a class="dropdown-item text-danger" href="auth-signin.html">
+                        <a class="dropdown-item text-danger" href="{{route('logout')}}">
                             <i class="bx bx-log-out fs-18 align-middle me-1"></i><span
                                 class="align-middle">Logout</span>
                         </a>
