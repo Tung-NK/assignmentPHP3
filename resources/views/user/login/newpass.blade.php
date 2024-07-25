@@ -9,7 +9,7 @@
                     <div class="login-register-wrapper">
                         <div class="login-register-tab-list nav">
                             <a class="active" data-bs-toggle="tab" href="#lg1">
-                                <h4>Forgot Password</h4>
+                                <h4>Reset Password</h4>
                             </a>
                         </div>
                         <div class="tab-content">

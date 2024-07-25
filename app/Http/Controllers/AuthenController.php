@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
+
 class AuthenController extends Controller
 {
     public function login()
@@ -38,7 +39,7 @@ class AuthenController extends Controller
         } elseif (Auth::attempt([
             'email' => $req->email,
             'password' => $req->password,
-        ], $req->remember) && Auth::user()->role == '2') {
+        ],$req -> remember) && Auth::user()->role == '2') {
             return view('user.home.home');
         } else {
             return redirect()->back()->with([

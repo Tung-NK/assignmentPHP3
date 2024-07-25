@@ -11,8 +11,14 @@ class CheckAdminMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user() -> role == '1') {
-            return $next($request);
+        if (Auth::check()) {
+            if(Auth::user() -> role == '1'){
+                return $next($request);
+            }else{
+                return redirect()->route('login')-> with([
+                    'messageErr' => 'Bạn không đủ quyền hạn'
+                ]);
+            }
         }
         
         return redirect()->route('login')-> with([

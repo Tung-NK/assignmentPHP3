@@ -33,7 +33,7 @@ Route::post('reset-pass', [AuthenController::class, 'resetPostPass'])->name('res
 Route::group([
     'prefix' => 'admin',
     'as' => 'admin.',
-    // 'middleware' => 'checkAdmin'
+    'middleware' => 'checkAdmin'
 ], function () {
     Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
         Route::get('list_user', [UserController::class, 'listUser'])->name('listUser');
